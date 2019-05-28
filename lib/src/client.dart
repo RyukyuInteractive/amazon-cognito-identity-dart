@@ -56,7 +56,7 @@ class Client {
     }
     var data;
     try {
-      data = json.decode(response.body);
+      data = json.decode(utf8.decode(response.bodyBytes));
     } catch (e) {
       // expect json
     }
